@@ -1,0 +1,23 @@
+.document {
+    max-width: 980px;
+    margin: 2rem auto;
+    padding: 0 0.5rem;
+    
+    font-family: Merriweather;
+}
+
+.title {
+    margin: 10% 0;
+}
+
+.title h1, .title p {
+    text-align: center;
+}
+
+.index {
+    margin-bottom: 3rem;
+}
+
+.indexEntry {
+    list-style-type: none;
+}

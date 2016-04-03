@@ -1,0 +1,65 @@
+.comparison {
+    text-align: center;
+}
+
+.original {
+    vertical-align: top;
+    
+    width: 150px;
+    height: 150px;
+}
+
+.constrained {
+    vertical-align: top;
+    
+    width: 75px;
+    height: 150px;
+}
+
+.text {
+    line-height: 150px;
+    font-size: 60px;
+    
+    margin: 0 40px;
+}
+
+.block rect {
+    stroke: #000000;
+}
+
+@media screen {
+    .block rect {
+        fill-opacity: 0.5;
+    }
+    
+    .block:hover rect {
+        fill-opacity: 1;
+    }
+    
+    .block text {
+        visibility: hidden;
+    }
+    
+    .block:hover text {
+        visibility: visible;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .original {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .constrained {
+        width: 50px;
+        height: 100px;
+    }
+    
+    .text {
+        line-height: 100px;
+        font-size: 40px;
+        
+        margin: 0 20px;
+    }
+}

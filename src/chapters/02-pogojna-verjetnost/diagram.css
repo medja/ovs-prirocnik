@@ -1,0 +1,18 @@
+.event {
+    display: inline-block;
+    width: 98px;
+    
+    font-size: 30px;
+    line-height: 58px;
+    text-align: center;
+}
+
+.subscript {
+    font-size: 22px;
+    line-height: 22px;
+    vertical-align: sub;
+}
+
+.overline {
+    text-decoration: overline;
+}

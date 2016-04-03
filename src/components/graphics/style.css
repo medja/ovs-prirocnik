@@ -1,0 +1,13 @@
+.line {
+    vector-effect: non-scaling-stroke;
+    stroke: #000000;
+}
+
+.rectangle rect {
+    shape-rendering: crispEdges;
+    vector-effect: non-scaling-stroke;
+}
+
+.text {
+    dominant-baseline: text-before-edge;
+}
