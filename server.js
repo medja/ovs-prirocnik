@@ -5,7 +5,7 @@ import config from './webpack.config';
 const compiler = webpack(config);
 
 const options = {
-    publicPath: config.output.publicPath
+    publicPath: `/${config.output.publicPath}`
 };
 
 const server = new WebpackDevServer(compiler, options);
