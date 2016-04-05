@@ -2,12 +2,10 @@ import React from 'react';
 
 import { createChapter } from 'components/chapter';
 
-import EnakomernaPorazdelitev from './01-enakomerna-porazdelitev';
-import BinomskaPorazdelitev from './02-binomska-porazdelitev';
-import GeometrijskaPorazdelitev from './03-geometrijska-porazdelitev';
-import PascalovaPorazdelitev from './04-pascalova-porazdelitev';
-import PoissonovaPorazdelitev from './05-poissonova-porazdelitev';
-import HipergeometrijskaPorazdelitev from './06-hipergeometrijska-porazdelitev';
+import FunkcijaGostote from './01-funkcija-gostote';
+import PorazdelitvenaFunkcija from './02-porazdelitvena-funkcija';
+import DiskretnePorazdelitve from './03-diskretne-porazdelitve';
+import ZveznePorazdelitve from './04-zvezne-porazdelitve';
 
 const title = 'Porazdelitve verjetnosti';
 
@@ -27,12 +25,10 @@ function Chapter() {
 }
 
 const subchapters = [
-    EnakomernaPorazdelitev,
-    BinomskaPorazdelitev,
-    GeometrijskaPorazdelitev,
-    PascalovaPorazdelitev,
-    PoissonovaPorazdelitev,
-    HipergeometrijskaPorazdelitev
+    FunkcijaGostote,
+    PorazdelitvenaFunkcija,
+    DiskretnePorazdelitve,
+    ZveznePorazdelitve
 ];
 
 export default createChapter(title, Chapter, subchapters);
