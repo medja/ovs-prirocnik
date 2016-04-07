@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Surface extends React.Component {
+class Surface extends Component {
     
     render() {
         const {
