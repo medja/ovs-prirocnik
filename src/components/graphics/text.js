@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import styles from './style.css';
 
-class Rectangle extends Component {
+class Text extends Component {
     
     static contextTypes = {
         x: PropTypes.number,
@@ -11,11 +11,20 @@ class Rectangle extends Component {
     };
     
     render() {
-        const { x = 0, y = 0, className, children, ...rest } = this.props;
+        const {
+            x = 0, y = 0,
+            left, right, center,
+            className, children,
+            ...rest
+        } = this.props;
         
-        const style = {
+        let style = {
             ...this.props.style
         };
+        
+        if (left) style.textAnchor = 'end';
+        else if (right) style.textAnchor = 'start';
+        else if (center) style.textAnchor = 'middle';
         
         const { x: offsetX = 0, y: offsetY = 0 } = this.context;
         
@@ -36,4 +45,4 @@ class Rectangle extends Component {
     
 }
 
-export default Rectangle;
+export default Text;
