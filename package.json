@@ -16,8 +16,10 @@
     "classnames": "2.2.3",
     "diacritics": "1.2.3",
     "katex": "0.5.1",
-    "react": "0.14.7",
-    "react-dom": "0.14.7"
+    "mathjs": "3.1.4",
+    "numbers": "0.6.0",
+    "react": "0.14.8",
+    "react-dom": "0.14.8"
   },
   "devDependencies": {
     "babel-cli": "6.6.5",
@@ -30,7 +32,7 @@
     "css-loader": "0.23.1",
     "file-loader": "0.8.5",
     "image-webpack-loader": "1.6.3",
-    "style-loader": "0.13.0",
+    "style-loader": "0.13.1",
     "url-loader": "0.5.7",
     "webpack": "1.12.14",
     "webpack-dev-server": "1.14.1"

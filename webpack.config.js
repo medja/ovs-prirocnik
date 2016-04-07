@@ -11,7 +11,12 @@ module.exports = {
         loaders: [
             {
                 test: /\.js$/i,
-                include: path.join(__dirname, 'src'),
+                include: [
+                    path.join(__dirname, 'src'),
+                    // Chrome has a problem with interpeting invalid function
+                    // names. Compiling the module through babel fixes the problem.
+                    path.join(__dirname, 'node_modules', 'mathjs')
+                ],
                 loaders: ['babel']
             },
             {
