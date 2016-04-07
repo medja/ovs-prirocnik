@@ -9,7 +9,7 @@ function Title(props) {
     return (
         <span>
             { props.title }{' '}
-            <Equation math="Cauchy(a, b)" />
+            <Equation math="f(a, b)" />
         </span>
     );
 }
