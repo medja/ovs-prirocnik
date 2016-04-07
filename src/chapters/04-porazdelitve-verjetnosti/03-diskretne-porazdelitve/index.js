@@ -6,6 +6,7 @@ import BinomskaPorazdelitev from './01-binomska-porazdelitev';
 import GeometrijskaPorazdelitev from './02-geometrijska-porazdelitev';
 import PascalovaPorazdelitev from './03-pascalova-porazdelitev';
 import HipergeometrijskaPorazdelitev from './04-hipergeometrijska-porazdelitev';
+import PoissonovaPorazdelitev from './05-poissonova-porazdelitev';
 
 const title = 'Diskretne porazdelitve';
 
@@ -23,7 +24,8 @@ const subchapters = [
     BinomskaPorazdelitev,
     GeometrijskaPorazdelitev,
     PascalovaPorazdelitev,
-    HipergeometrijskaPorazdelitev
+    HipergeometrijskaPorazdelitev,
+    PoissonovaPorazdelitev
 ];
 
 export default createChapter(title, Chapter, subchapters);
