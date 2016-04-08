@@ -31,7 +31,7 @@ class Continuous extends Plot {
     plot() {
         const { points } = this.state;
         const { range, selected, fill } = this.props;
-        const { steps, width } = this.params;
+        const { width } = this.params;
         
         const from = (selected[0] - range[0] + 0.5) * width;
         const to = (selected[1] - range[0] + 0.5) * width;

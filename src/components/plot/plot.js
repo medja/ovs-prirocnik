@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import { math, range } from 'core';
-import { Surface, Path } from 'components/graphics';
+import { Surface } from 'components/graphics';
 
 import Grid from './grid';
 
