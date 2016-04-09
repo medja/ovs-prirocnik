@@ -5,5 +5,5 @@ Organiziran vodič metanja kocke.
 ### TODO:
 
 - [ ] Primeri nalog
-- [ ] Delitev porazdelitev
+- [x] Delitev porazdelitev
 - [ ] Posamezne porazdelitve
