@@ -1,4 +1,5 @@
 var path = require('path');
+var webpack = require('webpack');
 
 module.exports = {
     entry: './src/index.js',
@@ -54,5 +55,12 @@ module.exports = {
     },
     resolve: {
         root: path.join(__dirname, 'src')
-    }
+    },
+    plugins: [
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: process.env.NODE_ENV
+            }
+        })
+    ]
 };
