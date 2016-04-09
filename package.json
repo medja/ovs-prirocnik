@@ -16,7 +16,7 @@
     "classnames": "2.2.3",
     "diacritics": "1.2.3",
     "katex": "0.5.1",
-    "mathjs": "3.1.4",
+    "mathjs": "git://github.com/josdejong/mathjs.git#develop",
     "numbers": "0.6.0",
     "react": "15.0.0",
     "react-dom": "15.0.0"
