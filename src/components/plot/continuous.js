@@ -5,6 +5,8 @@ import Plot from './plot';
 
 class Continuous extends Plot {
     
+    discrete = false;
+    
     position(step) {
         const { width, min } = this.params;
         

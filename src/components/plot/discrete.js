@@ -5,8 +5,12 @@ import Plot from './plot';
 
 class Discrete extends Plot {
     
+    discrete = true;
+    
     position(step) {
-        return step;
+        const { min } = this.params;
+        
+        return step + min;
     }
     
     update(props) {

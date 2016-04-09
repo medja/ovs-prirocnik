@@ -7,6 +7,11 @@ import Grid from './grid';
 
 class Plot extends Component {
     
+    static defaultProps = {
+        selected: [0, 0],
+        fill: '#bbdefb'
+    };
+    
     width = 1000;
     height = 700;
     
@@ -14,11 +19,19 @@ class Plot extends Component {
     offset = 100;
     
     componentWillMount() {
+        this.resize(this.props);
         this.update(this.props);
     }
     
     componentWillReceiveProps(props) {
+        this.resize(props);
         this.update(props);
+    }
+    
+    resize({ height }) {
+        if (height) {
+            this.height = height;
+        }
     }
     
     prepare(props) {
@@ -78,14 +91,28 @@ class Plot extends Component {
         }
     }
     
+    getStyle() {
+        const { width } = this.props;
+        
+        let style = {};
+        
+        if (width) {
+            style.maxWidth = ('' + width).replace(/^(\d+)$/, '$1px');
+        }
+        
+        return { ...style, ...this.props.style };
+    }
+    
     render() {
-        const { range, style, className } = this.props;
+        const { range, className } = this.props;
         
         const surface = {
             width: this.width,
             height: this.height,
             
-            style, className
+            style: this.getStyle(),
+            
+            className
         };
         
         const grid = {
