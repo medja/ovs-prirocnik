@@ -2,6 +2,7 @@ import React from 'react';
 
 import LaTeX from 'components/latex';
 
+import Group from './group';
 import style from './style.css';
 
 function Formula(props) {
@@ -19,6 +20,8 @@ function Formula(props) {
         </div>
     );
 }
+
+Formula.Group = Group;
 
 function name(name) {
     if (!name || name.length == 0) {
