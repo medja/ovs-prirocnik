@@ -38,8 +38,7 @@ function Chapter() {
             
             <p style={{ textAlign: 'center' }}>
                 <Discrete
-                    fill="#bbdefb" style={{ maxWidth: '500px' }}
-                    range={[1, 5]} selected={[1, 3]}
+                    width="500" range={[0, 4]} selected={[0, 2]}
                     func="binomial(4, x) * (1 / 2)^4"
                 />
             </p>
@@ -54,13 +53,12 @@ function Chapter() {
             
             <Formula
                 name="Porazdelitvena funkcija (zvezna)"
-                math="F(x) = \int_{-\infty}^x p(i)"
+                math="F(x) = \int_{-\infty}^x p(t) dt"
             />
             
             <p style={{ textAlign: 'center' }}>
                 <Continuous
-                    fill="#bbdefb" style={{ maxWidth: '500px' }}
-                    range={[-1, 3]} selected={[-2, 1]}
+                    width="500" range={[-1, 3]} selected={[-2, 1]}
                     func="exp(- x^2 / 2) / sqrt(2 * pi)"
                 />
             </p>
