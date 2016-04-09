@@ -33,7 +33,7 @@ function Chapter() {
             
             <Formula
                 name="Porazdelitvena funkcija (diskretna)"
-                math="F(x) = \sum_{i=1}^x p(i)"
+                math="F(x) = \sum_{i=1}^x f(i)"
             />
             
             <p style={{ textAlign: 'center' }}>
@@ -53,7 +53,7 @@ function Chapter() {
             
             <Formula
                 name="Porazdelitvena funkcija (zvezna)"
-                math="F(x) = \int_{-\infty}^x p(t) dt"
+                math="F(x) = \int_{-\infty}^x f(t) dt"
             />
             
             <p style={{ textAlign: 'center' }}>

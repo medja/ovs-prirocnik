@@ -9,7 +9,7 @@ function Title(props) {
     return (
         <span>
             { props.title }{' '}
-            <Equation math="p(x)" />
+            <Equation math="f(x)" />
         </span>
     );
 }

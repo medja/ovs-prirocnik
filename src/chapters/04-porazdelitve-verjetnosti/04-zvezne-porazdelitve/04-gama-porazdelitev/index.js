@@ -9,7 +9,7 @@ function Title(props) {
     return (
         <span>
             { props.title }{' '}
-            <Equation math="\Gamma (b, c)" />
+            <Equation math="\Gamma (\alpha, \beta)" />
         </span>
     );
 }
