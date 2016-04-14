@@ -17,8 +17,12 @@ class Chart extends Component {
     getFunc() {
         const { func, params } = this.props;
         
-        return func.replace(/\b[\w_]+\b/g, (name, pos) => {
-            return pos == 0 || !(name in params) ? name : params[name];
+        return func.replace(/[(\s,]([\w\\]+)\b/g, (match, name, pos) => {
+            if (pos == 0 || !(name in params)) {
+                return match;
+            } else {
+                return match[0] + params[name];
+            }
         });
     }
     
@@ -39,10 +43,7 @@ class Chart extends Component {
         const { name, params } = this.props;
         
         const variables = Object.entries(params).map(([name, value]) => {
-            const variable = name.replace(/^_/, '\\');
-            const fraction = math.fraction(value).toFraction();
-            
-            return `${variable} = ${fraction}`;
+            return `${name} = ${math.fraction(value).toFraction()}`;
         }).join(', ');
         
         return (

@@ -82,7 +82,7 @@ function Chapter() {
             <Chart
                 name="Primer grafa"
                 width="500" height="400"
-                func="Poisson(x, _lambda)" params={{ _lambda: 3 }}
+                func="Poisson(x, \lambda)" params={{ '\\lambda': 3 }}
                 range={[-1, 10]} discrete
             />
         </div>
