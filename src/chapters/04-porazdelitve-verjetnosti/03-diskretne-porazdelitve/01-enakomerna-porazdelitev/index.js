@@ -3,7 +3,7 @@ import React from 'react';
 import { createChapter } from 'components/chapter';
 import Equation from 'components/equation';
 import Formula from 'components/formula';
-import { Discrete } from 'components/plot';
+import Chart from 'components/chart';
 
 const title = 'Enakomerna porazdelitev';
 
@@ -77,17 +77,12 @@ function Chapter() {
                 />
             </Formula.Group>
             
-            <p style={{ padding: '0 1rem', fontStyle: 'italic' }}>
-                Primer grafa za <Equation math="n = 4" />:
-            </p>
-            
-            <p style={{ textAlign: 'center' }}>
-                <Discrete
-                    width="500" height="400"
-                    range={[0, 5]} selected={[1, 4]}
-                    func="0 ^ abs(ceil(x / 4) - 1)"
-                />
-            </p>
+            <Chart
+                name="Primer grafa"
+                width="500" height="400"
+                func="Uniform(x, n)" params={{ n: 4 }}
+                range={[0, 5]} discrete
+            />
         </div>
     );
 }

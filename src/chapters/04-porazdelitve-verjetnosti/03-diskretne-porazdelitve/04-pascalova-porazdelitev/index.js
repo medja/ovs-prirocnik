@@ -3,7 +3,7 @@ import React from 'react';
 import { createChapter } from 'components/chapter';
 import Equation from 'components/equation';
 import Formula from 'components/formula';
-import { Discrete } from 'components/plot';
+import Chart from 'components/chart';
 
 const title = 'Pascalova porazdelitev';
 
@@ -82,18 +82,12 @@ function Chapter() {
                 />
             </Formula.Group>
             
-            <p style={{ padding: '0 1rem', fontStyle: 'italic' }}>
-                Primer grafa za <Equation math="m = 2" /> in{' '}
-                <Equation math="p = 1/3" />:
-            </p>
-            
-            <p style={{ textAlign: 'center' }}>
-                <Discrete
-                    width="500" height="400"
-                    range={[1, 12]} selected={[1, 12]}
-                    func="x < 2 ? 0 : (x - 1) * (1/3)^2 * (2/3)^(x - 2)"
-                />
-            </p>
+            <Chart
+                name="Primer grafa"
+                width="500" height="400"
+                func="Pascal(x, m, p)" params={{ m: 2, p: 1/3 }}
+                range={[1, 12]} discrete
+            />
         </div>
     );
 }

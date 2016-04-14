@@ -3,7 +3,7 @@ import React from 'react';
 import { createChapter } from 'components/chapter';
 import Equation from 'components/equation';
 import Formula from 'components/formula';
-import { Discrete } from 'components/plot';
+import Chart from 'components/chart';
 
 const title = 'Poissonova porazdelitev';
 
@@ -79,17 +79,12 @@ function Chapter() {
                 />
             </Formula.Group>
             
-            <p style={{ padding: '0 1rem', fontStyle: 'italic' }}>
-                Primer grafa za <Equation math="\lambda = 3" />:
-            </p>
-            
-            <p style={{ textAlign: 'center' }}>
-                <Discrete
-                    width="500" height="400"
-                    range={[-1, 10]} selected={[0, 10]}
-                    func="x < 0 ? 0 : 3^x / e^(3) / factorial(x)"
-                />
-            </p>
+            <Chart
+                name="Primer grafa"
+                width="500" height="400"
+                func="Poisson(x, _lambda)" params={{ _lambda: 3 }}
+                range={[-1, 10]} discrete
+            />
         </div>
     );
 }

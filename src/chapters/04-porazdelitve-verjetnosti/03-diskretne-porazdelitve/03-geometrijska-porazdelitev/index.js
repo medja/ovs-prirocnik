@@ -3,7 +3,7 @@ import React from 'react';
 import { createChapter } from 'components/chapter';
 import Equation from 'components/equation';
 import Formula from 'components/formula';
-import { Discrete } from 'components/plot';
+import Chart from 'components/chart';
 
 const title = 'Geometrijska porazdelitev';
 
@@ -78,19 +78,14 @@ function Chapter() {
                         'X': 'Slučajna spremenljivka'
                     }}
                 />
-            </Formula.Group>
+            </Formula.Group>        
             
-            <p style={{ padding: '0 1rem', fontStyle: 'italic' }}>
-                Primer grafa za <Equation math="p = 1/3" />:
-            </p>
-            
-            <p style={{ textAlign: 'center' }}>
-                <Discrete
-                    width="500" height="400"
-                    range={[0, 10]} selected={[1, 10]}
-                    func="x < 1 ? 0 : (1/3) * (2/3)^(x-1)"
-                />
-            </p>
+            <Chart
+                name="Primer grafa"
+                width="500" height="400"
+                func="Geometic(x, p)" params={{ p: 1/3 }}
+                range={[0, 10]} discrete
+            />
         </div>
     );
 }

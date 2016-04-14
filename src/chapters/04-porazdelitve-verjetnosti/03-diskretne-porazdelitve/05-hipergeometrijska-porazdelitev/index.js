@@ -3,7 +3,7 @@ import React from 'react';
 import { createChapter } from 'components/chapter';
 import Equation from 'components/equation';
 import Formula from 'components/formula';
-import { Discrete } from 'components/plot';
+import Chart from 'components/chart';
 
 const title = 'Hipergeomterijska porazdelitev';
 
@@ -82,18 +82,12 @@ function Chapter() {
                 />
             </Formula.Group>
             
-            <p style={{ padding: '0 1rem', fontStyle: 'italic' }}>
-                Primer grafa za <Equation math="n = 4" />,{' '}
-                <Equation math="M = 3" /> in <Equation math="N = 10" />:
-            </p>
-            
-            <p style={{ textAlign: 'center' }}>
-                <Discrete
-                    width="500" height="400"
-                    range={[-1, 4]} selected={[0, 3]}
-                    func="x < 0 ? 0 : binomial(3, x) * binomial(7, 4 - x) / binomial(10, 4)"
-                />
-            </p>
+            <Chart
+                name="Primer grafa"
+                width="500" height="400"
+                func="Hypergeometric(x, n, M, N)" params={{ n: 4, M: 3, N: 10 }}
+                range={[-1, 4]} discrete
+            />
         </div>
     );
 }
