@@ -14,7 +14,7 @@ class Discrete extends Plot {
     }
     
     update(props) {
-        const { steps, width } = this.prepare(props);
+        const { steps, width } = this.params;
         
         const sections = this.generate(steps, (x, y) => {
             const left = x * width;
@@ -27,8 +27,9 @@ class Discrete extends Plot {
     }
     
     plot() {
+        const { fill } = this.props;
         const { sections } = this.state;
-        const { fill, range, selected } = this.props;
+        const { range, selected } = this.params;
         
         const style = {
             shapeRendering: 'crispEdges'

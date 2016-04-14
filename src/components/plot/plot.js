@@ -8,7 +8,6 @@ import Grid from './grid';
 class Plot extends Component {
     
     static defaultProps = {
-        selected: [0, 0],
         fill: '#bbdefb'
     };
     
@@ -20,11 +19,13 @@ class Plot extends Component {
     
     componentWillMount() {
         this.resize(this.props);
+        this.prepare(this.props);
         this.update(this.props);
     }
     
     componentWillReceiveProps(props) {
         this.resize(props);
+        this.prepare(props);
         this.update(props);
     }
     
@@ -35,7 +36,8 @@ class Plot extends Component {
     }
     
     prepare(props) {
-        const { range: [min, max] } = props;
+        const { range, selected = range } = props;
+        const [ min, max ] = range;
         
         this.compile(props.func);
         
@@ -46,7 +48,8 @@ class Plot extends Component {
         this.params = {
             steps,
             min, max,
-            width, height
+            width, height,
+            range, selected
         };
         
         return this.params;

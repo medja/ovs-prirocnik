@@ -14,8 +14,6 @@ class Continuous extends Plot {
     }
     
     update(props) {
-        this.prepare(props);
-        
         const points = this.generate(this.width + 1, (x, y) => {
             return [x, y];
         });
@@ -31,12 +29,12 @@ class Continuous extends Plot {
     }
     
     plot() {
+        const { fill } = this.props;
         const { points } = this.state;
-        const { range, selected, fill } = this.props;
-        const { width } = this.params;
+        const { range, selected, width } = this.params;
         
-        const from = (selected[0] - range[0] + 0.5) * width;
-        const to = (selected[1] - range[0] + 0.5) * width;
+        const from = Math.round((selected[0] - range[0] + 0.5) * width);
+        const to = Math.round((selected[1] - range[0] + 0.5) * width);
         
         const lower = Math.max(from, 0);
         const upper = Math.min(to, points.length - 1);
