@@ -83,7 +83,7 @@ function Chapter() {
             <Chart
                 name="Primer grafa"
                 width="500" height="400"
-                func="Geometic(x, p)" params={{ p: 1/3 }}
+                func="Geometric(x, p)" params={{ p: 1/3 }}
                 range={[0, 10]} discrete
             />
         </div>
