@@ -1,9 +1,13 @@
 const context = require.context('.', false, /^.\/((?!index).+).js$/);
 
-const modules = context.keys().map(context);
+const names = context.keys();
+const modules = names.map(context);
 
-const functions = modules.reduce((exports, { default: module }) => {
-    return { ...exports, [module.name]: module };
+const functions = names.reduce((exports, key, i) => {
+    const name = key.substr(2, 1).toUpperCase() + key.slice(3, -3)
+    const { default: module } = modules[i];
+    
+    return { ...exports, [name]: module };
 }, {});
 
 export default functions;
