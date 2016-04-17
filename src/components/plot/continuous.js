@@ -14,9 +14,17 @@ class Continuous extends Plot {
     }
     
     update(props) {
-        const points = this.generate(this.width + 1, (x, y) => {
+        let points = this.generate(this.width + 1, (x, y) => {
             return [x, y];
         });
+        
+        const limit = this.params.height / 2;
+        
+        for (let i = points.length - 2; i >= 0; i--) {
+            if (Math.abs(points[i][1] - points[i + 1][1]) > limit) {
+                points.splice(i + 1, 0, [ points[i + 1][0], points[i][1] ]);
+            }
+        }
         
         this.setState({ points });
     }
