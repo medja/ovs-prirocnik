@@ -45,8 +45,8 @@ function Chapter() {
             />
             
             <p>
-                Pri računanju z hipergeomterijsko porazdelitvijo si lahko
-                pomagamo z naslednjimi formulami:
+                Pri računanju z Poissonovo porazdelitvijo si lahko pomagamo z
+                naslednjimi formulami:
             </p>
             
             <Formula.Group>
