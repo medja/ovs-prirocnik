@@ -15,7 +15,12 @@ function Chapter() {
     return (
         <div>
             <p>
-                ...
+                Zvezne porazdelitve so porazdelitve po realni množici. Pri njih
+                je možen vsak izid znotraj nekega območja, ne le cela števila.
+                Glavna razlika v primerjavi z diskretnimi porazdelitvami je
+                torej ta, da ne moremo gledati samo nekega majhnega nabora
+                verjetnosti, saj je teh neskončno. Zato tu operacije, ki
+                vsebujejo vsoto, menjajo z integrali.
             </p>
         </div>
     );
