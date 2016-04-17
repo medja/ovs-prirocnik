@@ -36,8 +36,9 @@ class Plot extends Component {
     }
     
     prepare(props) {
-        const { range, selected = range } = props;
+        const { range } = props;
         const [ min, max ] = range;
+        const { selected = [ min - 1, max + 1 ] } = props;
         
         this.compile(props.func);
         

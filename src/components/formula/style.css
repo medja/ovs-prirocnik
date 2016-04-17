@@ -4,6 +4,7 @@
     
     margin: 1rem 0;
     
+    overflow-x: auto;
     page-break-inside: avoid;
 }
 

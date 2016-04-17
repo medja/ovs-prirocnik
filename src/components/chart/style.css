@@ -1,3 +1,7 @@
+.plot {
+    page-break-inside: avoid;
+}
+
 .plot p {
     text-align: center;
 }
