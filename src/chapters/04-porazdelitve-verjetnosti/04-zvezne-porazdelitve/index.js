@@ -20,7 +20,7 @@ function Chapter() {
                 Glavna razlika v primerjavi z diskretnimi porazdelitvami je
                 torej ta, da ne moremo gledati samo nekega majhnega nabora
                 verjetnosti, saj je teh neskončno. Zato tu operacije, ki
-                vsebujejo vsoto, menjajo z integrali.
+                vsebujejo vsoto, menjamo z integrali.
             </p>
         </div>
     );
