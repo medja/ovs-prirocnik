@@ -28,11 +28,6 @@ function Chapter() {
                 časa čakanja na neki dogodek.
             </p>
             
-            <p>
-                Pri računanju z gamma porazdelitvijo si lahko pomagamo z
-                naslednjimi formulami:
-            </p>
-            
             <Formula
                 name="Gama porazdelitev"
                 math="\Gamma (\alpha, \beta)"
@@ -41,6 +36,11 @@ function Chapter() {
                     '\\beta': 'Frekvenca dogodka'
                 }}
             />
+            
+            <p>
+                Pri računanju z gamma porazdelitvijo si lahko pomagamo z
+                naslednjimi formulami:
+            </p>
             
             <Formula.Group>
                 <Formula
@@ -71,6 +71,16 @@ function Chapter() {
                     }}
                 />
             </Formula.Group>
+            
+            <Formula
+                name="Funkcija Gama"
+                math={[
+                    '\\Gamma (x) = (x - 1)!, \\,x \\in \\mathbb{N}',
+                    '\\Gamma (x) = (x - 1) \\Gamma(x - 1)',
+                    '\\Gamma (1/2) = \\sqrt{2}',
+                    '\\Gamma (1) = 1'
+                ]}
+            />
             
             <Chart
                 name="Primer grafa"
