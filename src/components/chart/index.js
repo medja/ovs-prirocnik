@@ -17,7 +17,7 @@ class Chart extends Component {
     getFunc() {
         const { func, params } = this.props;
         
-        return func.replace(/[(\s,]([\w\\]+)\b/g, (match, name, pos) => {
+        return func.replace(/[(\s,]([\w_\\]+)\b/g, (match, name, pos) => {
             if (pos == 0 || !(name in params)) {
                 return match;
             } else {

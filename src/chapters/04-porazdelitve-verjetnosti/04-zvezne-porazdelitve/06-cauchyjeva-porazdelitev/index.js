@@ -75,6 +75,13 @@ function Chapter() {
                     }}
                 />
             </Formula.Group>
+            
+            <Chart
+                name="Primer grafa"
+                width="500" height="400"
+                func="Cauchy(x, x_0, \gamma)" params={{ 'x_0': -2, '\\gamma': 1 }}
+                range={[-5, 1]} continuous
+            />
         </div>
     );
 }
