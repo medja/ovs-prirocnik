@@ -42,7 +42,7 @@ function Chapter() {
             </p>
             
             <p>
-                Pri računanju z Cauchyjevo porazdelitvijo si lahko pomagamo z
+                Pri računanju s Cauchyjevo porazdelitvijo si lahko pomagamo z
                 naslednjimi formulami:
             </p>
             

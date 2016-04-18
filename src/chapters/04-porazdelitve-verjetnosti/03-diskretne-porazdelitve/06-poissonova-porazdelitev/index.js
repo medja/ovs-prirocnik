@@ -45,7 +45,7 @@ function Chapter() {
             />
             
             <p>
-                Pri računanju z Poissonovo porazdelitvijo si lahko pomagamo z
+                Pri računanju s Poissonovo porazdelitvijo si lahko pomagamo z
                 naslednjimi formulami:
             </p>
             

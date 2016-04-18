@@ -31,7 +31,7 @@ function Chapter() {
             </p>
             
             <Formula
-                name="Gama porazdelitev"
+                name="Hi-kvadrat porazdelitev"
                 math="X^2 (n) \sim \Gamma \left(\frac{n}{2}, \frac{1}{2}\right)"
                 params={{
                     'n': 'Število prostostnih stopenj'

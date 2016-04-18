@@ -38,7 +38,7 @@ function Chapter() {
             </p>
             
             <Formula
-                name="Pascalova porazdelitev"
+                name="Hipergeomterijska porazdelitev"
                 math={distribution}
                 params={{
                     'n': 'Število vseh izbir',
@@ -48,7 +48,7 @@ function Chapter() {
             />
             
             <p>
-                Pri računanju z hipergeomterijsko porazdelitvijo si lahko
+                Pri računanju s hipergeomterijsko porazdelitvijo si lahko
                 pomagamo z naslednjimi formulami:
             </p>
             
