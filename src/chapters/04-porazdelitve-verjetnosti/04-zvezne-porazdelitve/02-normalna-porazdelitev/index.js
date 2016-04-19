@@ -51,7 +51,7 @@ function Chapter() {
                 
                 <Formula
                     name="Porazdelitvena funkcija"
-                    math="F(x) = \phi(\frac{x-\sigma}{\mu})"
+                    math="F(x) = \phi(\frac{x - \mu}{\sigma})"
                     params={{
                         'x': 'Vrednost izida',
                         '\\phi': 'Funkcija napake'
